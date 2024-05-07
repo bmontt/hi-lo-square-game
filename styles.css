@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #008800;
+}
+
+#gameArea {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+#cards img {
+    margin: 5px;
+    width: 100px;
+    height: 150px;
+}
+
+#controls button {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    height: 10px 20px;
+}
