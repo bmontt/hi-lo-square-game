@@ -47,10 +47,13 @@ body {
 }
 
 .card.selected {
-    transition: transform 0.1s;
     transform: scale(2.3);  /* Slightly enlarge the selected card */
 }
 
+.card:hover {
+    transform: scale(2.3);
+    transition: transform 0.1s;
+}
 .card.is-flipped {
     transform: rotateY(180deg);
 }

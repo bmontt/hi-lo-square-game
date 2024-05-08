@@ -8,17 +8,17 @@ CARD_WIDTH, CARD_HEIGHT = 100, 150
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Hi-Lo Card Game")
 font = pygame.font.Font(None, 36)
-win_sound = pygame.mixer.Sound('hi_lo_square/packs/sounds/win_song.wav')
-loss_sound = pygame.mixer.Sound('hi_lo_square/packs/sounds/loss_song.wav')
+win_sound = pygame.mixer.Sound('hi-lo-square-game/assets/audio/win_song.wav')
+loss_sound = pygame.mixer.Sound('hi-lo-square-game/assets/audio/loss_song.wav')
 
 SUITS = ['hearts', 'diamonds', 'clubs', 'spades']
 RANKS = ['02', '03', '04', '05', '06', '07', '08', '09', '10', 'J', 'Q', 'K', 'A']
 CARDS = [(rank, suit) for suit in SUITS for rank in RANKS]
 card_images = {}
 for rank, suit in CARDS:
-    image = pygame.image.load(f'hi_lo_square/packs/cards/card_{suit}_{rank}.png')
+    image = pygame.image.load(f'hi-lo-square-game/assets/images/card_{suit}_{rank}.png')
     card_images[(rank, suit)] = pygame.transform.scale(image, (CARD_WIDTH, CARD_HEIGHT))
-card_back_image = pygame.transform.scale(pygame.image.load('hi_lo_square/packs/cards/card_back.png'), (CARD_WIDTH, CARD_HEIGHT))
+card_back_image = pygame.transform.scale(pygame.image.load('hi-lo-square-game/assets/images/card_back.png'), (CARD_WIDTH, CARD_HEIGHT))
 
 class HiLo:
     def __init__(self):
