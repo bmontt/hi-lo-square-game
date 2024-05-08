@@ -6,16 +6,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="gameArea">
-        <div id="cards"></div>
-        <div id="controls">
+    <!-- MAIN GAME -->
+    <div id="gameContainer">
+        <div id="cardGrid" class="card-grid"></div>
+        <!-- BUTTONS -->
+        <div class="controls">
             <button onclick="playTurn('higher')">Higher</button>
-            <button onclick="playTurn('lower')">Lower</button>
             <button onclick="playTurn('post')">Post</button>
+            <button onclick="playTurn('lower')">Lower</button>
             <button onclick="resetGame()">Reset</button>
         </div>
-        <div id="message"></div>
+
+        <div id="deckContainer" class="deck-container">
+            <div id="deckCount">52</div>
+        </div>
+
+        <div id="messageArea"></div>
     </div>
+
+
+    <!-- AUDIO FILES -->
+    <audio id="winSound" src="assets/audio/win_song.wav" preload="auto"></audio>
+    <audio id="loseSound" src="assets/audio/loss_song.wav" preload="auto"></audio>
+    <!-- <audio id="correctSound" src="audio/correct.mp3" preload="auto"></audio>
+    <audio id="wrongSound" src="audio/wrong.mp3" preload="auto"></audio> -->
+    
     <script src="script.js"></script>
 </body>
 </html>

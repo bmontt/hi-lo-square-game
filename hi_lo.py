@@ -53,8 +53,6 @@ class HiLo:
         deck_count_surface = font.render(str(len(self.deck)), True, (0, 0, 0))  # Change text color here
         deck_count_rect = deck_count_surface.get_rect(center=(800 + CARD_WIDTH // 2, 500 + CARD_HEIGHT // 2))
         deck_count_surface.set_alpha(128)
-        screen.blit(deck_count_surface, deck_count_rect)
-
     def select_card(self, x, y):
         row, col = (y - 50) // 160, (x - 100) // 110
         if 0 <= row < 3 and 0 <= col < 3 and self.grid[row][col][0] and not self.grid[row][col][2]:
